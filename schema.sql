@@ -8,6 +8,6 @@ CREATE TABLE authors (
 CREATE TABLE posts (
     id serial PRIMARY KEY,
     title varchar(200),
+    author_id integer REFERENCES author(id),
     content text,
-    author_id integer REFERENCES author(id)
 );
