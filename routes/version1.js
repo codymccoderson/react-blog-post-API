@@ -18,7 +18,7 @@ router.get("/all", async (request, response) => {
 
 // Read One
 
-router.get("/post/:p_id?", async (request, response) => {
+router.get("/posts/:p_id?", async (request, response) => {
     const postId = request.params.p_id;
     const theActualPost = await PostModel.getPostById(postId);
     response.json(theActualPost).status(200);
